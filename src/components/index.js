@@ -9,4 +9,5 @@ export { default as Checkout } from "./Checkout";
 export { default as ProductPage } from "./ProductPage";
 export { default as SearchResults } from "./SearchResults";
 export { default as ProductDetails } from "./ProductDetails";
-export { default as PorductBadge } from "./PorductBadge";
+export { default as ProductBadge } from "./ProductBadge";
+export { default as ProductRatings } from "./ProductRatings";

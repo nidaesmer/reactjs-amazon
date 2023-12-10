@@ -13,17 +13,14 @@ const ProductBadge = ({ badge }) => {
         #1 Best Seller
       </span>
     );
-  }
-  else if (badge === "limited") {
+  } else if (badge === "limited") {
     return (
       <span className="text-xs xl:text-sm bg-red-500 text-white p-1">
-    Limited Time Deal
+        Limited Time Deal
       </span>
-    )
+    );
   }
-  return (
-    <div></div>
-  )
+  return <div></div>;
 };
 
 export default ProductBadge;

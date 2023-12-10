@@ -1,8 +1,10 @@
-import { Search } from "./";
 import { ShoppingCartIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 
- // üst kısım ozellikleri
- 
+import { Search } from "./";
+
+// üst kısım ozellikleri
+
 const NavBar = () => {
   return (
     <header className="min-w-[1000px]">
@@ -14,6 +16,7 @@ const NavBar = () => {
             src={"../images/amazon.png"}
             alt=""
           />
+
           <div className="pr-4 pl-4">
             <div className="text-xs xl:text-sm">deliver to</div>
             <div className="text-sm xl:text-base font-bold">united kingdom</div>
@@ -35,10 +38,13 @@ const NavBar = () => {
             <div className="text-xs xl:text-sm">returns</div>
             <div className="text-sm xl:text-base font-bold">& orders</div>
           </div>
-          <div className="flex pr-3 pl-3">
-            <ShoppingCartIcon className="h-[48px]" />
-            <div className="mt-7 text-xs xl:text-sm font-bold">cart</div>
-          </div>
+          {/* alısveris cartına basınca bızı checkout sayfasına yonlendırmesı ıcın */}
+          <Link to={"/checkout"}>
+            <div className="flex pr-3 pl-3">
+              <ShoppingCartIcon className="h-[48px]" />
+              <div className="mt-7 text-xs xl:text-sm font-bold">cart</div>
+            </div>
+          </Link>
         </div>
       </div>
       <div className="flex bg-amazonclone-light_blue text-white space-x-3 text-xs xl:text-sm p-2 pl-6 ">
