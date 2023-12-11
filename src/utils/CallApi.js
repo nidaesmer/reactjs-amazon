@@ -1,5 +1,5 @@
 import axios from "axios";
-import { BASE_URL } from "../constants";
+import { BASE_URL } from "./constants";
 // Bu kısım, HTTP isteğinin başlık (headers) bilgilerini içeren bir yapılandırma nesnesi oluşturur. Bu örnekte, isteğin JSON formatında veri içerdiğini ve JSON formatında yanıt almayı beklediğini belirten iki temel başlık eklenmiştir: "Content-Type" ve "Accept".
 const config = {
   headers: {

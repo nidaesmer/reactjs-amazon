@@ -1,6 +1,7 @@
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { useEffect, useState } from "react";
-import { callAPI } from "./utils/CallApi";
+import { callAPI } from "../utils/CallApi";
+import { createSearchParams, useNavigate } from "react-router-dom";
 
 // buranin genel amacı arama kısmına bısı yazıldıgında alt tarafında onerılen kelımelerın cıkması için
 
@@ -8,10 +9,23 @@ const Search = () => {
   const [suggestions, setSuggestions] = useState(null);
   const [searchTerm, setsearchTerm] = useState("");
   const [category, setCategory] = useState("All"); //all kısmı ıcın
+  const navigate = useNavigate();
 
   const onHandleSubmit = (e) => {
     // bura all kısmında seceneklere bastıgında varsayılan olarak gorunmesı
     e.preventDefault();
+
+    navigate({
+      pathname: "search", //Bu, yönlendirme yapılan sayfanın yolu
+      // alt kısım, sorgu parametrelerini oluşturan bir fonksiyon (createSearchParams) çağırır. Bu fonksiyon, kategori ve arama terimi bilgilerini içeren bir sorgu parametre dizgisini oluşturur. Bu dizgi, search` alanına atanarak URL üzerinde belirli bir arama durumunu temsil eder.
+      search: `${createSearchParams({
+        category: `${category}`,
+        searchTerm: `${searchTerm}`,
+      })}`,
+    });
+    // Bu kısımlar, arama terimini ve kategoriyi sıfırlar. Yani, kullanıcı bir arama yaptıktan sonra, bu fonksiyon çağrıldığında arama terimi ve kategori sıfırlanır.
+    setsearchTerm("");
+    setCategory("All");
   };
 
   const getSuggestions = () => {

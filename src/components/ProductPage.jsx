@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ProductDetails } from "./";
-import { GB_CURRENCY } from "./constants";
-import { callAPI } from "./utils/CallApi";
-
+import { GB_CURRENCY } from "../utils/constants";
+import { callAPI } from "../utils/CallApi";
 // useParams kullanılarak URL'deki parametreleri alır. Burada, id adında bir parametre alınır. Eğer URL şu şekildeyse: "/product/123", id değeri 123 olacaktır.
 
 const ProductPage = () => {
