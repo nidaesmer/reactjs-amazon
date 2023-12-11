@@ -11,13 +11,14 @@ const NavBar = () => {
     <header className="min-w-[1000px]">
       <div className="flex bg-amazonclone text-white h-[60px]  ">
         {/* left */}
-        <div className="flex items-center m-4  ">
-          <img
-            className="h-[35px] w-[100px]"
-            src={"../images/amazon.png"}
-            alt=""
-          />
-
+        <div className="flex items-center m-4">
+          <Link to={"/"}>
+            <img
+              className="h-[35px] w-[100px]"
+              src={"../images/amazon.png"}
+              alt=""
+            />
+          </Link>
           <div className="pr-4 pl-4">
             <div className="text-xs xl:text-sm">deliver to</div>
             <div className="text-sm xl:text-base font-bold">united kingdom</div>
