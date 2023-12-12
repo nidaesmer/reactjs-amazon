@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { ProductDetails } from "./";
-import { GB_CURRENCY } from "../utils/constants";
+import { GB_CURRENCY, TRY_CURRENCY } from "../utils/constants";
 
 import {
   removeFromCart,
@@ -94,11 +94,19 @@ const Checkout = () => {
               </div>
               <div className="text-base xl:text-lg mb-4 ">
                 Subtotal ({itemsNumber} items):
-                <span className="font-semibold">
-                  {GB_CURRENCY.format(subtotal)}
-                </span>
+                <div className="font-semibold flex gap-x-2">
+                  <span> {GB_CURRENCY.format(subtotal)}</span>
+                  <p>or</p> 
+                  <span>{TRY_CURRENCY.format(subtotal)}</span>
+                </div>
               </div>
-              <button className="btn">Proceed to Checkout</button>
+
+              <Link
+                to={"/"}
+                className="btn flex items-center justify-center w-full"
+              >
+                Proceed to Checkout
+              </Link>
             </div>
           </div>
         </div>

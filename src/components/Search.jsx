@@ -43,7 +43,7 @@ const Search = () => {
       <div className="flex items-center h-10 bg-amazonclone-yellow rounded">
         <select
           onChange={(e) => setCategory(e.target.value)}
-          className="p-2 bg-gray-300 text-black border text-xs xl:text-sm"
+          className="p-2 bg-gray-300 text-black border-amazonclone-yellow border-l   text-xs xl:text-sm "
         >
           <option>All</option>
           <option>Deals</option>
@@ -53,12 +53,12 @@ const Search = () => {
           <option>Mobiles</option>
         </select>
         <input
-          className="flex grow items-center h-[100%] rounded-l text-black"
+          className="flex grow items-center h-[100%]  text-black "
           type="text"
           value={searchTerm}
           onChange={(e) => setsearchTerm(e.target.value)}
         />
-        <button onClick={onHandleSubmit} className="w-[45px]">
+        <button onClick={onHandleSubmit} className="w-[45px] pr-2">
           <MagnifyingGlassIcon className="h-[27px] m-auto stroke-slate-900" />
         </button>
       </div>

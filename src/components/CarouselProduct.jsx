@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 
 const CarouselProduct = () => {
   return (
-    <div className="bg-white m-3">
-      <div className="text-2xl font-semibold p-3">best sellers</div>
+    <div className="bg-white m-3 p-4 rounded">
+      <div className="text-2xl font-semibold pl-4 py-2 ">Best Sellers</div>
       <Swiper
         slidesPerView={7}
         spaceBetween={10}
@@ -28,7 +28,7 @@ const CarouselProduct = () => {
 
           // Link to={`/product/${i}`}>  Bu kısım, React Router tarafından sağlanan Link bileşenini kullanarak bir bağlantı oluşturur. Bu bağlantı, "/product" yoluna giden bir URL'yi temsil eder ve bu URL'nin sonuna i değeri eklenir. Yani, her slayt bir ürünü temsil eder ve bu ürünün detaylarına yönlendiren bir bağlantı oluşturulur.
 
-          <SwiperSlide key={i}>
+          <SwiperSlide className="first:pl-4" key={i}>
             <Link to={`/product/${i}`}>
               <img src={`../images/product_${i}_small.jpg`} alt="" />
             </Link>

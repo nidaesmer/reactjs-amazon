@@ -45,7 +45,10 @@ const SearchResults = () => {
                     <ProductDetails product={product} ratings={true} />{" "}
                     {/* gorunmesını istediklerim*/}
                     <div className="text-xl xl:text-2xl pt-1">
-                      {GB_CURRENCY.format(product.price)}{" "}
+
+                      {GB_CURRENCY.format(product.price)}
+                      
+
                     </div>
                   </div>
                 </div>
