@@ -73,21 +73,13 @@ const Login = () => {
           Giriş
         </button>
         <p className="flex flex-col mt-2 text-xs">
-          Oturum açarak, Amazon'un{" "}
-          <span className="text-blue-600 ">
-            Kullanım ve Satış Koşulları'nı{" "}
-          </span>
-          kabul etmiş olursunuz. Kişisel verilerinizin Amazon tarafından nasıl
-          işlendiğine ilişkin detaylı bilgi için{" "}
-          <span className="text-blue-600">Gizlilik Bildirimi</span>,
-          <span className="text-blue-600"> Çerez Bildirimi</span> ve{" "}
-          <span className="text-blue-600">
-            İlgi Alanına Dayalı Tanıtımları{" "}
-          </span>{" "}
-          inceleyebilirsiniz.
+          Oturum açarak, Amazon'un Kullanım ve Satış Koşulları'nı kabul etmiş
+          olursunuz. Kişisel verilerinizin Amazon tarafından nasıl işlendiğine
+          ilişkin detaylı bilgi için Gizlilik Bildirimi , Çerez Bildirimi ve
+          İlgi Alanına Dayalı Tanıtımları inceleyebilirsiniz.
         </p>
 
-        <p className="flex flex-col mt-2 text-xs text-blue-600 hover:underline hover:text-yellow-500">
+        <p className="flex flex-col mt-2 text-xs text-blue-600 hover:underline hover:text-yellow-500 cursor-pointer">
           Yardıma mı ihtiyacınız var?
         </p>
       </form>

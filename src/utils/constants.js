@@ -7,8 +7,7 @@ export const TRY_CURRENCY = Intl.NumberFormat("tr-TR", {
   style: "currency",
   currency: "TRY",
 });
-/* export const USD_CURRENCY = Intl.NumberFormat("en-US", {
+export const USD_CURRENCY = Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "USD",
 });
-*/

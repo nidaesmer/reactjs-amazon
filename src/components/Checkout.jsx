@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { ProductDetails } from "./";
-import { GB_CURRENCY, TRY_CURRENCY } from "../utils/constants";
+import { GB_CURRENCY, TRY_CURRENCY, USD_CURRENCY } from "../utils/constants";
 
 import {
   removeFromCart,
@@ -72,7 +72,19 @@ const Checkout = () => {
                     </div>
                     <div className="col-span-2">
                       <div className="text-lg xl:text-xl mt-2 mr-4 font-semibold">
-                        {GB_CURRENCY.format(product.price)}
+                        <select>
+                          <option>
+                            <span className="font-semibold">
+                              {GB_CURRENCY.format(subtotal)}
+                            </span>
+                          </option>
+                          <option>
+                            <span>{TRY_CURRENCY.format(subtotal)}</span>
+                          </option>
+                          <option>
+                            <span>{USD_CURRENCY.format(subtotal)}</span>
+                          </option>
+                        </select>
                       </div>
                     </div>
                   </div>
@@ -81,9 +93,19 @@ const Checkout = () => {
             })}
             <div className="text-lg xl:text-xl text-right mb-4 mr-4">
               Subtotal ({itemsNumber} items):
-              <span className="font-semibold">
-                {GB_CURRENCY.format(subtotal)}
-              </span>
+              <select>
+                <option>
+                  <span className="font-semibold">
+                    {GB_CURRENCY.format(subtotal)}
+                  </span>
+                </option>
+                <option>
+                  <span>{TRY_CURRENCY.format(subtotal)}</span>
+                </option>
+                <option>
+                  <span>{USD_CURRENCY.format(subtotal)}</span>
+                </option>
+              </select>
             </div>
             {/* checkout*/}
             <div className="col-span-2 bg-white rounded h-[250px] p-7">
@@ -96,8 +118,10 @@ const Checkout = () => {
                 Subtotal ({itemsNumber} items):
                 <div className="font-semibold flex gap-x-2">
                   <span> {GB_CURRENCY.format(subtotal)}</span>
-                  <p>or</p> 
+                  <p> , </p>
                   <span>{TRY_CURRENCY.format(subtotal)}</span>
+                  <p>or</p>
+                  <span>{USD_CURRENCY.format(subtotal)}</span>
                 </div>
               </div>
 
