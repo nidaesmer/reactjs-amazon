@@ -13,7 +13,7 @@ const HomePage = () => {
         <Carousel />
         <div className="grid grid-cols-3 xl:grid-cols-4 -mt-80 cursor-pointer">
           <HomePageCard
-            title={"Create unforgettable memories this Christmas!"}
+            title={"Unforgettable Christmas memories!"}
             img={"../images/happy.jpg "}
             link={"more information"}
           />
@@ -23,7 +23,7 @@ const HomePage = () => {
             link={"see all deals"}
           />
           <HomePageCard
-            title={"Spellbinding moments in every frame, vibrant memories."}
+            title={"Enjoy Movies, Ignite Your Imagination!"}
             img={"../images/movie.jpg "}
             link={"discover now"}
           />
@@ -45,7 +45,7 @@ const HomePage = () => {
           <HomePageCard
             title={"Explore New Tech Wonders!"}
             img={"../images/techo4.jpg "}
-            link={"see terms and conditions"}
+            link={"see all deals"}
           />
           <HomePageCard
             title={"We have a surprise for you!"}
@@ -64,25 +64,89 @@ const HomePage = () => {
         <CarouselCategory />
       </div>
       <div className="h-[200px]">
-        <div className="flex justify-center bg-blue-600 pb-2 pt-2 tracking-wide text-sm">
+        <div className="flex justify-center bg-blue-900 pb-4 pt-4 tracking-wide text-sm text-white">
           <Link to={"/"}> Başa Dön</Link>
         </div>
-        <div className="bg-blue-800 text-white mt-4">
-          <div className="grid grid-cols-3">
-            <div className="font-bold flex ml-32 ">Hakkımızda </div>
-            <div className="ml-32">
-              <div>Kariyer</div>
-              <div>İletişim</div>
-              <div>Bilgi Toplumu Hizmetleri</div>
-              <div>Amazon Science</div>
+
+        <div>
+          <div className="grid grid-cols-4 bg-blue-950   ">
+            <div className="flex justify-center  pb-8 pt-8">
+              <ul className="text-white ">
+                <li className="font-bold cursor-pointer hover:underline ">
+                  Hakkımızda
+                </li>
+                <li className="cursor-pointer hover:underline">Kariyer</li>
+                <li className="cursor-pointer hover:underline">İletişim</li>
+                <li className="cursor-pointer hover:underline">
+                  Bilgi toplumu hizmetleri
+                </li>
+                <li className="cursor-pointer hover:underline">
+                  {" "}
+                  Amazon science
+                </li>
+              </ul>
             </div>
-            <div className="basis 1/4">
-              <div>Bizimle Para Kazanın</div>
+
+            <div className="flex justify-center pb-8 pt-8">
+              <div>
+                <ul className="text-white">
+                  <li className="font-bold cursor-pointer hover:underline">
+                    Bizimle Para Kazanın
+                  </li>
+                  <li className="cursor-pointer hover:underline">
+                    Markanızı Koruyun ve Oluşturun
+                  </li>
+                  <li className="cursor-pointer hover:underline">
+                    Amazon'da Satış Yapın
+                  </li>
+                  <li className="cursor-pointer hover:underline">
+                    Ürünlerinizin Reklamını Yapın
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="flex justify-center pb-8 pt-8">
+              <div>
+                <ul className="text-white">
+                  <li className="font-bold cursor-pointer hover:underline">
+                    Amazon Ödeme Araçları
+                  </li>
+                  <li className="cursor-pointer hover:underline">
+                    Kredi Kartı
+                  </li>
+                  <li className="cursor-pointer hover:underline">
+                    Taksitli Ödeme
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="flex justify-center pb-8 pt-8">
+              <div>
+                <ul className="text-white">
+                  <li className="font-bold cursor-pointer hover:underline">
+                    Size Yardımcı Olalım
+                  </li>
+                  <li className="cursor-pointer hover:underline">
+                    {" "}
+                    COVID-19 ve Amazon{" "}
+                  </li>
+                  <li className="cursor-pointer hover:underline">İadeler</li>
+                  <li className="cursor-pointer hover:underline">
+                    Geri Dönüşüm
+                  </li>
+                  <li className="cursor-pointer hover:underline">
+                    Müşteri Hizmetleri
+                  </li>
+                  <li className="cursor-pointer hover:underline">
+                    Erişilebilirlik
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-
-        <div className="container flex pb-8"></div>
       </div>
     </div>
   );

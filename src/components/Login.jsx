@@ -3,6 +3,7 @@ import * as Yup from "yup";
 import React from "react";
 import { Link } from "react-router-dom";
 
+
 const Login = () => {
   const formik = useFormik({
     initialValues: {
@@ -11,7 +12,7 @@ const Login = () => {
     },
     validationSchema: Yup.object({
       password: Yup.string()
-        .max(20, "Must be 20 characters or less")
+        .max(10, "Must be 20 characters or less")
         .required("Required"),
       email: Yup.string().email("Invalid email address").required("Required"),
     }),
