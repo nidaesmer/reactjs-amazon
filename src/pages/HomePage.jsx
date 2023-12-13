@@ -1,5 +1,11 @@
 import { Link } from "react-router-dom";
-import { Carousel, HomePageCard, CarouselCategory, CarouselProduct } from "./";
+import {
+  Carousel,
+  CarouselCategory,
+  CarouselProduct,
+  HomePageCard,
+} from "../components";
+
 const HomePage = () => {
   return (
     <div className="bg-amazonclone-background">

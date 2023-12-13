@@ -4,9 +4,9 @@ import { ProductDetails } from "./";
 import { GB_CURRENCY, TRY_CURRENCY, USD_CURRENCY } from "../utils/constants";
 
 import {
-  removeFromCart,
   decrementInCart,
   incrementInCart,
+  removeFromCart,
 } from "../redux/cartSlice";
 
 const Checkout = () => {
@@ -22,6 +22,7 @@ const Checkout = () => {
       )
   );
   const dispatch = useDispatch();
+
   return (
     <div className="h-screen bg-amazonclone-background">
       <div className="min-w-[1000px] max-w-[1500px] m-auto pt-8">
@@ -58,13 +59,23 @@ const Checkout = () => {
                           </button>
                         </div>
                         <div className="grid grid-cols-3 w-20 text-center">
-                          <div className="text-xl xl:text-2xl bg-gray-400 rounded cursor-pointer">
+                          <div
+                            className="text-xl xl:text-2xl bg-gray-400 rounded cursor-pointer"
+                            onClick={() =>
+                              dispatch(decrementInCart(product.id))
+                            }
+                          >
                             -
                           </div>
                           <div className="text-lg xl:text-xl bg-gray-200">
                             {product.quantity}
                           </div>
-                          <div className="text-xl xl:text-2xl bg-gray-400 rounded cursor-pointer ">
+                          <div
+                            className="text-xl xl:text-2xl bg-gray-400 rounded cursor-pointer"
+                            onClick={() =>
+                              dispatch(incrementInCart(product.id))
+                            }
+                          >
                             +
                           </div>
                         </div>

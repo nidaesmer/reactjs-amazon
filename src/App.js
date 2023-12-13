@@ -1,7 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { HomePage, Checkout, SearchResults, ProductPage } from "./components";
+import { Checkout, SearchResults } from "./components";
+
 import Login from "./components/Login";
 import MainLayout from "./components/MainLayout";
+import HomePage from "./pages/HomePage";
+import ProductPage from "./pages/ProductPage";
 
 const App = () => {
   return (
