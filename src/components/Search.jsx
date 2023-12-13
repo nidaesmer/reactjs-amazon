@@ -64,7 +64,7 @@ const Search = () => {
       </div>
       {/* burada suggestions.json dosyasıyla birlkte ilerlicez*/}
       {suggestions && ( //suggestion var mı kontrol eder
-        <div className="bg-white text-black w-full z-40 absolute">
+        <div className="bg-white text-black w-full z-40 absolute cursor-default">
           {suggestions
             .filter((suggestion) => {
               // Bu kısım, öneri listesini filtreler. filter fonksiyonu, her bir öneriyi alır ve belirli bir koşula uyanları içeren yeni bir dizi oluşturur.

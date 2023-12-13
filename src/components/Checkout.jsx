@@ -58,13 +58,13 @@ const Checkout = () => {
                           </button>
                         </div>
                         <div className="grid grid-cols-3 w-20 text-center">
-                          <div className="text-xl xl:text-2xl bg-gray-400 rounded">
+                          <div className="text-xl xl:text-2xl bg-gray-400 rounded cursor-pointer">
                             -
                           </div>
                           <div className="text-lg xl:text-xl bg-gray-200">
                             {product.quantity}
                           </div>
-                          <div className="text-xl xl:text-2xl bg-gray-400 rounded">
+                          <div className="text-xl xl:text-2xl bg-gray-400 rounded cursor-pointer ">
                             +
                           </div>
                         </div>
