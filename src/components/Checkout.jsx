@@ -30,6 +30,7 @@ const Checkout = () => {
           {/* product*/}
           <div className="col-span-6 bg-white">
             <div className="text-2xl xl:text-3xl m-4">Shopping Cart</div>
+
             {products.map((product) => {
               return (
                 <div key={product.id}>
@@ -118,31 +119,30 @@ const Checkout = () => {
                 </option>
               </select>
             </div>
-            {/* checkout*/}
-            <div className="col-span-2 bg-white rounded h-[250px] p-7">
-              <div className="text-xs xl:text-sm text-green-800 mb-2">
-                Your order qualifies for{" "}
-                <span className="font-bold">FREE DELIVERY</span>. Delivery
-                Details
-              </div>
-              <div className="text-base xl:text-lg mb-4 ">
-                Subtotal ({itemsNumber} items):
-                <div className="font-semibold flex gap-x-2">
-                  <span> {GB_CURRENCY.format(subtotal)}</span>
-                  <p> , </p>
-                  <span>{TRY_CURRENCY.format(subtotal)}</span>
-                  <p>or</p>
-                  <span>{USD_CURRENCY.format(subtotal)}</span>
-                </div>
-              </div>
-
-              <Link
-                to={"/"}
-                className="btn flex items-center justify-center w-full"
-              >
-                Proceed to Checkout
-              </Link>
+          </div>
+          {/* checkout*/}
+          <div className="col-span-2 bg-white rounded h-[250px] p-7">
+            <div className="text-xs xl:text-sm text-green-800 mb-2">
+              Your order qualifies for{" "}
+              <span className="font-bold">FREE DELIVERY</span>. Delivery Details
             </div>
+            <div className="text-base xl:text-lg mb-4 ">
+              Subtotal ({itemsNumber} items):
+              <div className="font-semibold flex gap-x-2">
+                <span> {GB_CURRENCY.format(subtotal)}</span>
+                <p> , </p>
+                <span>{TRY_CURRENCY.format(subtotal)}</span>
+                <p>or</p>
+                <span>{USD_CURRENCY.format(subtotal)}</span>
+              </div>
+            </div>
+
+            <Link
+              to={"/"}
+              className="btn flex items-center justify-center w-full"
+            >
+              Proceed to Checkout
+            </Link>
           </div>
         </div>
       </div>

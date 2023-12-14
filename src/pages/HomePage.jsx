@@ -57,24 +57,21 @@ const HomePage = () => {
             img={"../images/home_grid_8.jpg "}
             link={"see terms and conditions"}
           />
-  
         </div>
         {/* gorunmesini istediklerim burda */}
         <CarouselProduct />
         <CarouselCategory />
       </div>
       <div className="h-[200px]">
-        <div className="flex justify-center bg-blue-900 pb-4 pt-4 tracking-wide text-sm text-white">
-          <Link to={"/"}> Başa Dön</Link>
+        <div className="flex justify-center bg-amazonclone-light_blue pb-4 pt-4 -tracking-tighter text-sm text-white">
+          AMAZON
         </div>
 
         <div>
-          <div className="grid grid-cols-4 bg-blue-950   ">
+          <div className="grid grid-cols-4 bg-amazonclone   ">
             <div className="flex justify-center  pb-8 pt-8">
               <ul className="text-white ">
-                <li className="font-bold cursor-pointer hover:underline ">
-                  Hakkımızda
-                </li>
+                <li className="font-bold ">Hakkımızda</li>
                 <li className="cursor-pointer hover:underline">Kariyer</li>
                 <li className="cursor-pointer hover:underline">İletişim</li>
                 <li className="cursor-pointer hover:underline">
@@ -90,9 +87,7 @@ const HomePage = () => {
             <div className="flex justify-center pb-8 pt-8">
               <div>
                 <ul className="text-white">
-                  <li className="font-bold cursor-pointer hover:underline">
-                    Bizimle Para Kazanın
-                  </li>
+                  <li className="font-bold ">Bizimle Para Kazanın</li>
                   <li className="cursor-pointer hover:underline">
                     Markanızı Koruyun ve Oluşturun
                   </li>
@@ -109,9 +104,7 @@ const HomePage = () => {
             <div className="flex justify-center pb-8 pt-8">
               <div>
                 <ul className="text-white">
-                  <li className="font-bold cursor-pointer hover:underline">
-                    Amazon Ödeme Araçları
-                  </li>
+                  <li className="font-bold ">Amazon Ödeme Araçları</li>
                   <li className="cursor-pointer hover:underline">
                     Kredi Kartı
                   </li>
@@ -125,9 +118,7 @@ const HomePage = () => {
             <div className="flex justify-center pb-8 pt-8">
               <div>
                 <ul className="text-white">
-                  <li className="font-bold cursor-pointer hover:underline">
-                    Size Yardımcı Olalım
-                  </li>
+                  <li className="font-bold ">Size Yardımcı Olalım</li>
                   <li className="cursor-pointer hover:underline">
                     {" "}
                     COVID-19 ve Amazon{" "}
