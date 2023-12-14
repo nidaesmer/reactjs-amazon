@@ -1,10 +1,16 @@
 import { Formik, useFormik } from "formik";
 import * as Yup from "yup";
 import React from "react";
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { login } from "../redux/authSlice";
+// import { useDispatch } from "react-redux";
+//navigateyi de import et
 
 const Login = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const formik = useFormik({
     initialValues: {
       password: "",
@@ -17,9 +23,11 @@ const Login = () => {
       email: Yup.string().email("Invalid email address").required("Required"),
     }),
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      dispatch(login({ email: values.email }));
+      navigate("/");
     },
   });
+
   return (
     <div className="bg-white flex flex-col items-center justify-center ">
       <Link to={"/"}>
@@ -67,6 +75,7 @@ const Login = () => {
             <div className="text-xs text-red-700">{formik.errors.password}</div>
           ) : null}
         </div>
+
         <button
           type="submit"
           className="btn flex items-center justify-center w-full text-xs py-2"

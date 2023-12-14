@@ -1,11 +1,15 @@
 import { ShoppingCartIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import { Search } from ".";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../redux/authSlice";
 
 // üst kısım ozellikleri
 
 const NavBar = () => {
+  const dispatch = useDispatch();
+  const { isLoggedIn, email } = useSelector((state) => state.auth);
+
   const cart = useSelector((state) => state.cart.productsNumber);
   return (
     <header className="min-w-[1000px]">
@@ -19,7 +23,7 @@ const NavBar = () => {
               alt=""
             />
           </Link>
-          <div className="pr-3 pl-3 flex flex-col p-2 hover:border rounded-sm border-white max-w-xs ">
+          <div className="pr-3 pl-3 flex flex-col p-2 hover:outline outline-1 rounded-sm border-white max-w-xs ">
             <div className="text-xs xl:text-sm  ">deliver to</div>
             <div className="text-sm xl:text-base font-bold">united kingdom</div>
           </div>
@@ -30,13 +34,26 @@ const NavBar = () => {
         </div>
         {/* right */}
         <div className="flex items-center m-4  ">
-          <div className="pr-4 pl-4 pr-3 pl-3 flex flex-col p-2 hover:border rounded-sm border-white max-w-xs">
-            <div className="text-xs xl:text-sm ">hello, sign in</div>
-            <div className="text-sm xl:text-base font-bold">
-              accounts & lists
-            </div>
-          </div>
-          <div className="pr-4 pl-4 pr-3 pl-3 flex flex-col p-2 hover:border rounded-sm border-white max-w-xs">
+          {isLoggedIn ? (
+            <button
+              className="text-sm xl:text-base font-bold"
+              onClick={() => dispatch(logout())}
+            >
+              logout
+            </button>
+          ) : (
+            <Link
+              to={"/login"}
+              className="pr-4 pl-4 pr-3 pl-3 flex flex-col p-2 hover:outline outline-1 rounded-sm border-white max-w-xs"
+            >
+              <div className="text-xs xl:text-sm ">hello, sign in</div>
+              <div className="text-sm xl:text-base font-bold">
+                accounts & lists
+              </div>
+            </Link>
+          )}
+
+          <div className="pr-4 pl-4 pr-3 pl-3 flex flex-col p-2 hover:outline outline-1 rounded-sm border-white max-w-xs">
             <div className="text-xs xl:text-sm">returns</div>
             <div className="text-sm xl:text-base font-bold">& orders</div>
           </div>

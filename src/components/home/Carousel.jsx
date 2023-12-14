@@ -5,10 +5,10 @@ import "swiper/css";
 
 const Carousel = () => {
   return (
-    <div className="h-[600px] bg-white">
+    <div className="h-[600px]  bg-white">
       <Swiper
-        loop={true}
-        spaceBetween={0}
+        loop={true} //kaydırdıkca başa tekrar donebilmek için
+        spaceBetween={0} //aralarında boşluk istemiyoruz
         // navigation={true}
         //modules={[Navigation, Autoplay]}
         //autoplay={{

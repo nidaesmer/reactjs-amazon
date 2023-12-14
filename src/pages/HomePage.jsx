@@ -5,11 +5,16 @@ import {
   CarouselProduct,
   HomePageCard,
 } from "../components";
+//homePagenın ıcınde goruntuleneceklerı ımport edıyoruz
 
 const HomePage = () => {
   return (
     <div className="bg-amazonclone-background">
-      <div className="min-w-[1000px] max-w-[1500px] m-auto bg-gray-400">
+      {" "}
+      {/*en dış sarman*/}
+      <div className="min-w-[1000px] max-w-[2500px] m-auto bg-gray-400">
+        {" "}
+        {/*cartların arkası*/}
         <Carousel />
         <div className="grid grid-cols-3 xl:grid-cols-4 -mt-80 cursor-pointer">
           <HomePageCard
@@ -52,14 +57,9 @@ const HomePage = () => {
             img={"../images/home_grid_8.jpg "}
             link={"see terms and conditions"}
           />
-          <div className="m-3 pt-8">
-            <img
-              className="xl:hidden"
-              src={"../images/banner_image_2.jpg"}
-              alt=""
-            />
-          </div>
+  
         </div>
+        {/* gorunmesini istediklerim burda */}
         <CarouselProduct />
         <CarouselCategory />
       </div>
