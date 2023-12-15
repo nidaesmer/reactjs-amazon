@@ -7,15 +7,18 @@ import { callAPI } from "../utils/CallApi";
 import { addToCart } from "../redux/cartSlice";
 // useParams kullanılarak URL'deki parametreleri alır. Burada, id adında bir parametre alınır. Eğer URL şu şekildeyse: "/product/123", id değeri 123 olacaktır.
 
+
+//useState kullanım sebebi APİ'den gelen nesneye ihtiac duydugumzdan
 const ProductPage = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState("1");
   const dispatch = useDispatch();
 
+  //product.json dan veri cekmek için
   const getProduct = () => {
     callAPI(`data/products.json`).then((productResults) => {
-      setProduct(productResults[id]);
+      setProduct(productResults[id]); //ürünleri id ile çeiyoruz jsondan, idye gore dogru urun ayrıntıları gelcek
     });
   };
 
@@ -25,13 +28,14 @@ const ProductPage = () => {
   };
 
   useEffect(() => {
-    getProduct();
+    getProduct(); //jsondakı urunlerı getırmek ıcın. apı cagrısı
   }, []);
 
   //Eğer product durumu henüz gelmemişse veya title özelliği yoksa, kullanıcıya "Loading Product.." yazısı gösterilir. Bu, ürün verileri yüklenene kadar beklenen bir durumu temsil eder.
   if (!product?.title) return <h1>Loading Product..</h1>;
 
-  // varsa produtcun titlesi gelir
+  // varsa produt.json ıcındekı bilgiler geliyor aşağoıda
+  //productDetail filesi olusturuyoruz
   return (
     product && (
       <div className="h-screen bg-amazonclone-background ">
@@ -85,7 +89,7 @@ const ProductPage = () => {
                 {/*sepete ekle dendiginde eklenmesi isin dispatch edıyoruz */}
                 <button
                   onClick={() => dispatch(addToCart(addQuantityToProduct()))}
-                  className="btn"
+                  className="btn font-bold"
                 >
                   Add to Cart
                 </button>

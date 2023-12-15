@@ -15,7 +15,7 @@ const NavBar = () => {
     <header className="min-w-[1000px]">
       <div className="flex bg-amazonclone text-white h-[60px]  ">
         {/* left */}
-        <div className="flex items-center m-4">
+        <div className="flex items-center m-4 ">
           <Link to={"/"}>
             <img
               className="h-[35px] w-[100px]"

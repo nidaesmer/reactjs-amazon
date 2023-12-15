@@ -2,6 +2,8 @@ import { ProductBadge, ProductRatings } from "./";
 
 const ProductDetails = ({ product, ratings }) => {
   //brand:marka avgrating:ort derecelendırme attribute:nitelik badge:rozet
+  //props gecip detayları listeliyoruz
+  //ürün detayında resmın yanndakı marka, yıldız, rozet vs gelmesi için props gecıyoruz bunları
   return (
     <div className="mb-1">
       <div className="text-xl xl:text-2xl font-medium mb-1">

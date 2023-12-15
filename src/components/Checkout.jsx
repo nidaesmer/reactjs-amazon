@@ -137,9 +137,13 @@ const Checkout = () => {
               </div>
             </div>
 
+            <button className="btn flex items-center justify-center w-full font-bold">
+              Buy Now
+            </button>
+
             <Link
               to={"/"}
-              className="btn flex items-center justify-center w-full"
+              className="btn flex items-center justify-center w-full font-bold"
             >
               Proceed to Checkout
             </Link>

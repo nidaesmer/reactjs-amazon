@@ -5,6 +5,7 @@ const ProductRatings = (props) => {
   const ratingNumber = props.ratings;
 
   //starNumber yıldız simgesi vercek
+  //kac tane yıldız gorunmesı ıcın derecelendırmek ıcın array kullanıyoruz
 
   return (
     <div className="flex">

@@ -1,8 +1,9 @@
 import React from "react";
 
+//rozetlerın ozellıklerı ıcın 
 const ProductBadge = ({ badge }) => {
   if (badge === "choice") {
-    return (
+    return ( //badge choice ise amazons yazdır 
       <span className="text-xs xl:text-sm bg-slate-800 text-white p-1">
         Amazon's <span className="text-orange-500">Choice</span>
       </span>

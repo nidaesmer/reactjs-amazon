@@ -14,9 +14,8 @@ const CarouselProduct = () => {
         //navigation={true}
         //modules={[Navigation]}
       >
+        {/* caruosel category'deki gibi <SwiperSlide>ile eklemek yerıne array.fromu kullandık. 2 farklı yontem */}
 
-    {/* caruosel category'deki gibi <SwiperSlide>ile eklemek yerıne array.fromu kullandık. 2 farklı yontem */}
-        
         {Array.from({ length: 9 }, (_, i) => (
           // 9 elemanlı bir dizi oluşturur. bu olayların amacı slyat gosterısı gibi gorunmesidir.
           // (_, i) => fonksiyonu, dizi elemanlarını oluştururken her bir elemanın indeksini (i) kullanır.
@@ -32,7 +31,7 @@ const CarouselProduct = () => {
           // Link to={`/product/${i}`}>  Bu kısım, React Router tarafından sağlanan Link bileşenini kullanarak bir bağlantı oluşturur. Bu bağlantı, "/product" yoluna giden bir URL'yi temsil eder ve bu URL'nin sonuna i değeri eklenir. Yani, her slayt bir ürünü temsil eder ve bu ürünün detaylarına yönlendiren bir bağlantı oluşturulur.
 
           <SwiperSlide className="first:pl-4" key={i}>
-            <Link to={`/product/${i}`}> 
+            <Link to={`/product/${i}`}>
               <img src={`../images/product_${i}_small.jpg`} alt="" />
             </Link>
           </SwiperSlide>
