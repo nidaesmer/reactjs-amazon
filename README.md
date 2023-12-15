@@ -13,3 +13,6 @@ Eğer kullanıcı giriş yapmışsa (isLoggedIn true ise), "logout" butonunu ren
 2-Sitenin görsel ile kaplı kısmında <SwiperSlider/> kullanılmıştır, bunun amacı ise kaydırmalı bir yapı ile diğer görselleri görebilme estetiği sağlanılmaya çalışılmıştır.
 ![3](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/98581d07-573e-4f34-a9e3-755878cdd31f)
 kodlarda swiperSliderin özellikleri işlenmiştir.
+
+![4](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/efcf53ca-ba16-4919-8a37-08f3bd214267)
+3-Sitemizin bu kısmında cartlar görünüyor. Farklı görsel ve reklamlarla e-ticaret mantığı uygulanmaya çalışıldı.
