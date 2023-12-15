@@ -64,6 +64,7 @@ Global State olarak kullanılan Redux sayesinde ürünlerin miktarlarının artm
 İncrement ve decrement tetiklenmesinin kodları ise:
 ![17](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/6d5d26f6-e745-49fa-93ba-9749a7bf9d24)
 
+
 ## Bu görüntüler ve daha fazlası için sitemin canlıya alınmış halini ziyaret edebilirsiniz, kodlarım ise proje reposunda bulunmaktadır. Teşekkür ederim!
 [esmer](https://esmerzon.netlify.app/)https://esmerzon.netlify.app/
 
