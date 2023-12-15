@@ -1,7 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-//import { Navigation, Autoplay } from "swiper";
 import "swiper/css";
-//import "swiper/css/navigation";
+
 
 const Carousel = () => {
   return (
@@ -9,13 +8,7 @@ const Carousel = () => {
       <Swiper
         loop={true} //kaydırdıkca başa tekrar donebilmek için
         spaceBetween={0} //aralarında boşluk istemiyoruz
-        // navigation={true}
-        //modules={[Navigation, Autoplay]}
-        //autoplay={{
-        // delay:4500
-        //}}
-        className="h-[50%]"
-      >
+        className="h-[50%]">
         <SwiperSlide>
           <img src="../images/carousel_1.jpg" alt="Slide 1" />
         </SwiperSlide>

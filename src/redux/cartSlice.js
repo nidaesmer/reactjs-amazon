@@ -10,20 +10,24 @@ export const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
-      // check if in product array
-      const addProductExists = state.products.find(
+// eklenen ürünün zaten bulunup bulunmadığını kontrol eder. Bunun için find fonksiyonu kullanılır. Eğer ürün zaten sepette bulunuyorsa, addProductExists değişkeni bu ürünü temsil eder.
+      const addProductExists = state.products.find( 
         (product) => product.id === action.payload.id
       );
+// Eğer addProductExists değeri varsa, bu demektir ki ürün zaten sepette bulunuyor. Bu durumda, ürünün miktarını artırmak için addProductExists.quantity değeri, eklenen miktarla (action.payload.quantity) artırılır.
       if (addProductExists) {
         addProductExists.quantity += parseInt(action.payload.quantity);
+// Eğer addProductExists değeri yoksa, bu demektir ki ürün henüz sepette bulunmuyor. Bu durumda, yeni bir ürün nesnesi oluşturulur ve state.products dizisine eklenir. Bu ürün nesnesi, action.payload ile gelen verileri (ürün özellikleri) içerir ve aynı zamanda eklenen miktarı (action.payload.quantity) da içerir.
       } else {
         state.products.push({
           ...action.payload,
           quantity: parseInt(action.payload.quantity),
         });
       }
+// Son olarak, state.productsNumber değeri, sepete eklenen toplam ürün sayısını temsil eder. Bu değer, eklenen ürünün miktarıyla artırılır.
       state.productsNumber =
         state.productsNumber + parseInt(action.payload.quantity);
+        //burdan checkout sayfasına gıdıyoz
     },
     removeFromCart: (state, action) => {
       // kaldırılacak urunu bulcaz

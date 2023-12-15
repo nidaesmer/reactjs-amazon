@@ -1,7 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-// import { Navigation } from "swiper";
 import "swiper/css";
-//import "swiper/css/navigation";
 import { Link } from "react-router-dom";
 
 const CarouselProduct = () => {
@@ -11,8 +9,6 @@ const CarouselProduct = () => {
       <Swiper
         slidesPerView={7} //sayfada gorunen 7 adet olsun
         spaceBetween={10}
-        //navigation={true}
-        //modules={[Navigation]}
       >
         {/* caruosel category'deki gibi <SwiperSlide>ile eklemek yerıne array.fromu kullandık. 2 farklı yontem */}
 

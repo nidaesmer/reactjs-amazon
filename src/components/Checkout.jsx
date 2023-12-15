@@ -2,7 +2,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { ProductDetails } from "./";
 import { GB_CURRENCY, TRY_CURRENCY, USD_CURRENCY } from "../utils/constants";
-
 import {
   decrementInCart,
   incrementInCart,
@@ -10,16 +9,12 @@ import {
 } from "../redux/cartSlice";
 
 const Checkout = () => {
-  const products = useSelector((state) => state.cart.products);
-  const itemsNumber = useSelector((state) => state.cart.productsNumber);
+  const products = useSelector((state) => state.cart.products); //ürünleri çekmek için
+  const itemsNumber = useSelector((state) => state.cart.productsNumber); //toplsm itemsı yazdıablmek ıcın
   const subtotal = useSelector(
     (
       state //toplam fıyat ıcın
-    ) =>
-      state.cart.products.reduce(
-        (subtotal, product) => subtotal + product.price * product.quantity,
-        0
-      )
+    ) =>state.cart.products.reduce((subtotal, product) => subtotal + product.price * product.quantity,0)
   );
   const dispatch = useDispatch();
 
@@ -29,14 +24,15 @@ const Checkout = () => {
         <div className="grid grid-cols-8  gap-10">
           {/* product*/}
           <div className="col-span-6 bg-white">
-            <div className="text-2xl xl:text-3xl m-4">Shopping Cart</div>
-
+            <div className="text-2xl xl:text-3xl m-4 pl-8 ">Shopping Cart</div>
+            {/* ürünşeri getirir*/}
             {products.map((product) => {
               return (
                 <div key={product.id}>
                   <div className="grid grid-cols-12 divide-y divide-gray-400 mr-4">
                     <div className="col-span-10 grid grid-cols-8 divide-y divide-gray-400">
                       <div className="col-span-2">
+                        {/* sepetteki gorselleri alır getirir idye göre*/}
                         <Link to={`/product/${product.id}`}>
                           <img
                             className="p-4 m-auto"

@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";//alsıverıs sepetı ıcın
 import { ProductDetails } from "../components";
 import { GB_CURRENCY } from "../utils/constants";
 import { callAPI } from "../utils/CallApi";
-import { addToCart } from "../redux/cartSlice";
+import { addToCart } from "../redux/cartSlice"; //alsıverıs sepetı ıcın
 // useParams kullanılarak URL'deki parametreleri alır. Burada, id adında bir parametre alınır. Eğer URL şu şekildeyse: "/product/123", id değeri 123 olacaktır.
 
 
@@ -12,7 +12,7 @@ import { addToCart } from "../redux/cartSlice";
 const ProductPage = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
-  const [quantity, setQuantity] = useState("1");
+  const [quantity, setQuantity] = useState("1"); //eklenılen urunu duzgun tutabılmek ıcın
   const dispatch = useDispatch();
 
   //product.json dan veri cekmek için
@@ -57,29 +57,22 @@ const ProductPage = () => {
             {/* right*/}
             <div className="col-span-2 p-4 bg-white">
               <div className="text-xl xl:text-2xl text-red-700 text-right font-semibold">
-                {GB_CURRENCY.format(product.price)}
-              </div>
+                {GB_CURRENCY.format(product.price)}</div>
               <div className="text-base xl:text-lg text-gray-500 text-right font-semibold">
                 RRP:
                 <span className="line-through">
-                  {GB_CURRENCY.format(product.oldPrice)}
-                </span>
-              </div>
+                  {GB_CURRENCY.format(product.oldPrice)}</span></div>
               <div className="text-sm xl:text-base text-blue-500 font-semibold mt-3">
-                FREE Returns
-              </div>
+                FREE Returns</div>
               <div className="text-sm xl:text-base text-blue-500  font-semibold mt-1">
-                FREE Delivery
-              </div>
+                FREE Delivery</div>
               <div className="text-base xl:text-lg text-green-700 font-semibold mt-1">
-                In Stock
-              </div>
+                In Stock </div>
               <div className="text-base xl:text-lg mt-1">
                 Quantity:
                 <select
                   onChange={(e) => setQuantity(e.target.value)}
-                  className="p-2 bg-white border rounded-md focus:border-indigo-600"
-                >
+                  className="p-2 bg-white border rounded-md focus:border-indigo-600">
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>
@@ -88,7 +81,7 @@ const ProductPage = () => {
               <Link to={"/checkout"}>
                 {/*sepete ekle dendiginde eklenmesi isin dispatch edıyoruz */}
                 <button
-                  onClick={() => dispatch(addToCart(addQuantityToProduct()))}
+                  onClick={() => dispatch(addToCart(addQuantityToProduct()))} //sepete ekle dendiğinde dispatch yapılacak
                   className="btn font-bold"
                 >
                   Add to Cart

@@ -12,20 +12,16 @@ const ProductDetails = ({ product, ratings }) => {
       <div className="text-sm xl:text-base mb-1">
         by <span className="text-blue-500">{product.brand}</span>
       </div>
-      {ratings && (
+      {ratings && ( //rating gosterılcek yer varsa goster dıyorum
         <div>
           <ProductRatings
             avgRating={product.avgRating}
-            ratings={product.ratings}
-          />
-        </div>
+            ratings={product.ratings}/></div>
       )}
       <div className="text-sm xl:text-base mb-1">{product.avgRating}</div>
       <div className="text-xs xl:text-sm font-bold mb-1">
-        {product.attribute}
-      </div>
-      <div>
-        {/* amaç rozet getirtmek özetin altına */}
+        {product.attribute}</div>
+      <div>  {/* amaç rozet getirtmek özetin altına */}
         <ProductBadge badge={product.badge} />
       </div>
     </div>

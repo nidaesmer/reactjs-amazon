@@ -12,6 +12,7 @@ const SearchResults = () => {
     const searchTerm = searchParams.get("searchTerm");
     const category = searchParams.get("category");
 
+    //search.jsondan verileri cekıyoruz bu yzuden api cagryırouz
     callAPI(`data/search.json`).then((SearchResults) => {
       const categoryResults = SearchResults[category];
       if (searchTerm) {
@@ -26,9 +27,9 @@ const SearchResults = () => {
   };
 
   useEffect(() => {
-    getSearchResults();
-  }, [searchParams]);
-
+    getSearchResults(); //get le gösteriyor 2.
+  }, [searchParams]); //search paremtlerını kavrıyor ve 1.
+//searchParams yazmasak sonuclar lıstelenmez, bu bır bagımlılık, degıstıgınde guncellemeler aktıflesır
   return (
     <div className="min-w-[1200px] max-w-[1300px] m-auto pt-4">
       {products &&
@@ -42,8 +43,8 @@ const SearchResults = () => {
                 </div>
                 <div className="col-span-10 bg-gray-50 border-gray-100 hover:bg-gray-100 ">
                   <div className="font-medium text-black p-2">
-                    <ProductDetails product={product} ratings={true} />{" "}
-                    {/* gorunmesını istediklerim*/}
+                    <ProductDetails product={product} ratings={true} /> 
+                    {/* props ile gorunmesını istediklerimi cekıyorum */}
                     <div className="text-xl xl:text-2xl pt-1">
                       {GB_CURRENCY.format(product.price)}
                     </div>

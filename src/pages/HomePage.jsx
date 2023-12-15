@@ -28,12 +28,12 @@ const HomePage = () => {
             link={"see all deals"}
           />
           <HomePageCard
-            title={"Enjoy Movies, Ignite Your Imagination!"}
+            title={"Enjoy Movies, Ignite Imagination!"}
             img={"../images/movie.jpg "}
             link={"discover now"}
           />
           <HomePageCard
-            title={"Get 4, Pay for 3 on Supermarket Items."}
+            title={"4 for 3 on Supermarket Items."}
             img={"../images/cart.jpg "}
             link={"start shopping"}
           />

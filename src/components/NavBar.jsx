@@ -1,7 +1,7 @@
 import { ShoppingCartIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import { Search } from ".";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux"; //alısverıs sepeti için
 import { logout } from "../redux/authSlice";
 
 // üst kısım ozellikleri

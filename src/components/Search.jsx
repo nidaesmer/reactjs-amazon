@@ -6,17 +6,17 @@ import { createSearchParams, useNavigate } from "react-router-dom";
 // buranin genel amacı arama kısmına bısı yazıldıgında alt tarafında onerılen kelımelerın cıkması için
 
 const Search = () => {
-  const [suggestions, setSuggestions] = useState(null);
-  const [searchTerm, setsearchTerm] = useState("");
+  const [suggestions, setSuggestions] = useState(null); // bu verileri tutmak getırmek ıcın useState yapıyoruzz
+  const [searchTerm, setsearchTerm] = useState("");//aramaya yazılanları gormek ııcn, g yazdıgımda g'yi yakalıcak
   const [category, setCategory] = useState("All"); //all kısmı ıcın
   const navigate = useNavigate();
 
   const onHandleSubmit = (e) => {
-    // bura all kısmında seceneklere bastıgında varsayılan olarak gorunmesı
-    e.preventDefault();
+    // bura all kısmında seceneklere bastıgında varsayılan olarak gorunmesı, onclikk verdiğimiz için
+    e.preventDefault(); //sonradam vrsayılanı kaldırması ıcın, butona bastıgımızda gorunurden gıtmesı ıcın
 
     navigate({
-      pathname: "search", //Bu, yönlendirme yapılan sayfanın yolu
+      pathname: "search", //Bu, yönlendirme yapılan sayfanın yolu, /search olarak bu sayfaya gıdebılcek yani 
       // alt kısım, sorgu parametrelerini oluşturan bir fonksiyon (createSearchParams) çağırır. Bu fonksiyon, kategori ve arama terimi bilgilerini içeren bir sorgu parametre dizgisini oluşturur. Bu dizgi, search` alanına atanarak URL üzerinde belirli bir arama durumunu temsil eder.
       search: `${createSearchParams({
         category: `${category}`,
@@ -28,7 +28,7 @@ const Search = () => {
     setCategory("All");
   };
 
-  const getSuggestions = () => {
+  const getSuggestions = () => { //apiden suggestionsları cagrıp useeffectle gostericez
     callAPI(`data/suggestions.json`).then((suggestionResults) => {
       setSuggestions(suggestionResults);
     });
@@ -55,21 +55,22 @@ const Search = () => {
         <input
           className="flex grow items-center h-[100%]  text-black "
           type="text"
-          value={searchTerm}
-          onChange={(e) => setsearchTerm(e.target.value)}
+          value={searchTerm} //harfleri yakalamak ıcın
+          onChange={(e) => setsearchTerm(e.target.value)} //güncellemeleri takip etmek için
         />
         <button onClick={onHandleSubmit} className="w-[45px] pr-2">
           <MagnifyingGlassIcon className="h-[27px] m-auto stroke-slate-900" />
         </button>
       </div>
+      {/* ARAMAYA YAZILAN HARFLERIN GELME DURUMU*/}
       {/* burada suggestions.json dosyasıyla birlkte ilerlicez*/}
       {suggestions && ( //suggestion var mı kontrol eder
         <div className="bg-white text-black w-full z-40 absolute cursor-default">
           {suggestions
             .filter((suggestion) => {
               // Bu kısım, öneri listesini filtreler. filter fonksiyonu, her bir öneriyi alır ve belirli bir koşula uyanları içeren yeni bir dizi oluşturur.
-              const currentSearchTerm = searchTerm.toLowerCase();
-              const title = suggestion.title.toLowerCase();
+              const currentSearchTerm = searchTerm.toLowerCase(); //guncel veriyi almak ıcın
+              const title = suggestion.title.toLowerCase();  
               return (
                 currentSearchTerm && //Arama terimi (currentSearchTerm) boş değilse devam eder.
                 title.startsWith(currentSearchTerm) && // Öneri başlığı, arama terimiyle başlıyorsa devam eder.
@@ -84,7 +85,7 @@ const Search = () => {
               ) => (
                 <div
                   key={suggestion.id}
-                  onClick={() => setsearchTerm(suggestion.title)}
+                  onClick={() => setsearchTerm(suggestion.title)} //aranana tıkladıgımızda ınputta gorunmesı ıcın
                 >
                   {suggestion.title} {/*oneri baslgıını ekrana yazdırır*/}
                 </div>
