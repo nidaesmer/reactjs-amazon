@@ -18,15 +18,16 @@ Eğer kullanıcı giriş yapmışsa (isLoggedIn true ise), "logout" butonunu ren
 
 
 ### 3-
-Sitenin görsel ile kaplı kısmında ise <SwiperSlider/> kullanılmıştır, bunun amacı ise kaydırmalı bir yapı ile diğer görselleri görebilme estetiği sağlanılmaya çalışılmıştır.
+Sitenin Navbar bölümündeki görsel ile kaplı kısmında ise <SwiperSlider/> kullanılmıştır, bunun amacı ise kaydırmalı bir yapı ile diğer görselleri görebilme estetiği sağlanılmaya çalışılmıştır.
 ![3](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/98581d07-573e-4f34-a9e3-755878cdd31f)
 
 kodlarda swiperSliderin özellikleri işlenmiştir.
-![4](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/efcf53ca-ba16-4919-8a37-08f3bd214267)
+
 
 
 ### 4-
 Sitemizin bu kısmında cartlar görünüyor. Farklı görsel ve reklamlarla e-ticaret mantığı uygulanmaya çalışıldı.
+![4](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/efcf53ca-ba16-4919-8a37-08f3bd214267)
 ![5](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/393a89c5-b39e-4647-bba7-876c3c8c76cb)
 
 4-Bu kısımda sitenin tıklanabilir kategorileri gösterilmiştir. Herhangi bir ürüne tıklayıp detaya gitme sayfası kodlanmıştır.
