@@ -48,6 +48,7 @@ Sitenin bu bölümünde tıklanan ürünün detay sayfasına gittiği görülüy
 
 Şimdiki bölüm ise Add to Cart olayını gösterecek. Burada bilgileri ve ürünün miktarını görmekteyiz.
 ![12](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/73bc3857-f3a8-4350-aa77-964751672e23)
+
 Kodlarda ise jsondan geçilen propslar, miktarın eski ve yeni fiyatları gösterilmiş ve bunlar dispatch hook ile yazılmıştır.
 ![11](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/ced969a3-48b8-4435-8a43-f25646b23b3b)
 
