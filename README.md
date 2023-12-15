@@ -52,4 +52,10 @@ Sitenin bu bölümünde tıklanan ürünün detay sayfasına gittiği görülüy
 Kodlarda ise jsondan geçilen propslar, miktarın eski ve yeni fiyatları gösterilmiş ve bunlar dispatch hook ile yazılmıştır.
 ![11](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/ced969a3-48b8-4435-8a43-f25646b23b3b)
 
+Burada Shopping Carttaki ürün, ürün bilgileri ve toplam fiyat gösterilmiştir.
+![13](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/a010e29b-2ff4-4f0a-bd85-a746ac90cb33)
+
+Toplam fiyatın yazdırılması:
+![14](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/cbce011f-cf98-44b1-836d-4ae5b8d11fd4)
+
 
