@@ -11,8 +11,8 @@ buradanın amacı kullanıcının giriş yapmış olup olmadığına bağlı ola
 Eğer kullanıcı giriş yapmışsa (isLoggedIn true ise), "logout" butonunu render eder. Bu buton, belirli bir stile sahiptir ve tıklama olayını işleyen bir onClick olay işleyici içerir. 
 
 Şimdi sitenin login kısmına bir bakalım.
-![10](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/6bfa7950-0650-4a5b-94f8-e8ba45240e73)
-Formik ve Yup validasyonu ile giriş yapma durumları yönetilmiştir
+![10](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/4b097f32-14b4-484f-8e42-011c1cba9909)
+Formik ve Yup validasyonu ile giriş yapma durumları yönetilmiştir.
 
 
 2-Sitenin görsel ile kaplı kısmında ise <SwiperSlider/> kullanılmıştır, bunun amacı ise kaydırmalı bir yapı ile diğer görselleri görebilme estetiği sağlanılmaya çalışılmıştır.
@@ -45,7 +45,7 @@ Bu kısım, React Router tarafından sağlanan Link bileşenini kullanarak bir b
 
 
 ![8](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/c899936a-3d52-427b-83e9-e617da734165)
-Sitenin bu bölümünde tıklanan ürünün detay sayfasına gittiği görülüyor. Jsondan gelinen veriler ile title, img, badge, rating değerleri görülmekte. Bu değerler için ise ayrı ayrı filelerimiz mevcut. ve kodlarımızda bu filelerden props geçtiğimiz görünmektedir:
+Sitenin bu bölümünde tıklanan ürünün detay sayfasına gittiği görülüyor. Jsondan alınan veriler ile title, img, badge, rating değerleri görülmekte. Bu değerler için ise ayrı ayrı filelerimiz mevcut. ve kodlarımızda bu filelerden props geçtiğimiz görünmektedir:
 ![9](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/1022ed67-f524-4c06-9d2a-2b459aa0da20)
 
 
