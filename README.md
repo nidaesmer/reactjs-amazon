@@ -22,15 +22,19 @@ kodlarda swiperSliderin özellikleri işlenmiştir.
 
 Best Sellers kısmı için detayların json dosyasından gelme işlemi şu kodlarla sağlanmıştır:
 ![6](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/66f79245-18a1-4db0-859c-57add689e3be)
-a) <SwiperSlide>ile eklemek yerıne array.fromu kullandık. 2 farklı yöntem gösterilmiş olduu.
+a) <SwiperSlide> ile eklemek yerıne array.fromu kullandık. 2 farklı yöntem gösterilmiş oldu.
+
 b)   ```{Array.from({ length: 9 }, (_, i) => (```
    9 elemanlı bir dizi oluşturur. Bu olayların amacı slyat gosterisi gibi görünmesidir.
    (_, i) => fonksiyonu, dizi elemanlarını oluştururken her bir elemanın indeksini (i) kullanır.
     _ elemanları getirir.
+    
 c) ```<SwiperSlide key={i}> ```
 bu Swiper kütüphanesi için bir slayt öğesini temsil eden bir JSX öğesini oluşturur. Her slayt, kendine özgü bir anahtar (key) değeri ile belirlenir.
+
 d) ```<img src={`../images/product_${i}_small.jpg`} alt="" /> ```
 ifadesi, her slayt içinde bir resim öğesi oluşturur. Resmin yolu (src) i değeri kullanılarak dinamik olarak belirlenir. Örneğin, ilk slayt için ../images/product_0_small.jpg, ikinci slayt için ../images/product_1_small.jpg gibi.
+
 e) ```Link to={`/product/${i}`}>```
 Bu kısım, React Router tarafından sağlanan Link bileşenini kullanarak bir bağlantı oluşturur. Bu bağlantı, "/product" yoluna giden bir URL'yi temsil eder ve bu URL'nin sonuna i değeri eklenir. Yani, her slayt bir ürünü temsil eder ve bu ürünün detaylarına yönlendiren bir bağlantı oluşturulur.
 
