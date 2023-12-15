@@ -10,6 +10,11 @@
 buradanın amacı kullanıcının giriş yapmış olup olmadığına bağlı olarak içeriği koşullu olarak render etmektedir.
 Eğer kullanıcı giriş yapmışsa (isLoggedIn true ise), "logout" butonunu render eder. Bu buton, belirli bir stile sahiptir ve tıklama olayını işleyen bir onClick olay işleyici içerir. 
 
+Şimdi sitenin login kısmına bir bakalım.
+![10](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/6bfa7950-0650-4a5b-94f8-e8ba45240e73)
+Formik ve Yup validasyonu ile giriş yapma durumları yönetilmiştir
+
+
 2-Sitenin görsel ile kaplı kısmında ise <SwiperSlider/> kullanılmıştır, bunun amacı ise kaydırmalı bir yapı ile diğer görselleri görebilme estetiği sağlanılmaya çalışılmıştır.
 ![3](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/98581d07-573e-4f34-a9e3-755878cdd31f)
 kodlarda swiperSliderin özellikleri işlenmiştir.
@@ -37,4 +42,12 @@ ifadesi, her slayt içinde bir resim öğesi oluşturur. Resmin yolu (src) i de�
 
 e) ```Link to={`/product/${i}`}>```
 Bu kısım, React Router tarafından sağlanan Link bileşenini kullanarak bir bağlantı oluşturur. Bu bağlantı, "/product" yoluna giden bir URL'yi temsil eder ve bu URL'nin sonuna i değeri eklenir. Yani, her slayt bir ürünü temsil eder ve bu ürünün detaylarına yönlendiren bir bağlantı oluşturulur.
+
+
+![8](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/c899936a-3d52-427b-83e9-e617da734165)
+Sitenin bu bölümünde tıklanan ürünün detay sayfasına gittiği görülüyor. Jsondan gelinen veriler ile title, img, badge, rating değerleri görülmekte. Bu değerler için ise ayrı ayrı filelerimiz mevcut. ve kodlarımızda bu filelerden props geçtiğimiz görünmektedir:
+![9](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/1022ed67-f524-4c06-9d2a-2b459aa0da20)
+
+
+
 
