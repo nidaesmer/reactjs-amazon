@@ -10,10 +10,8 @@
 buradanın amacı kullanıcının giriş yapmış olup olmadığına bağlı olarak içeriği koşullu olarak render etmektedir.
 Eğer kullanıcı giriş yapmışsa (isLoggedIn true ise), "logout" butonunu render eder. Bu buton, belirli bir stile sahiptir ve tıklama olayını işleyen bir onClick olay işleyici içerir. 
 
-Şimdi sitenin login kısmına bir bakalım.
+Şimdi sitenin login kısmına bir bakalım. Formik ve Yup validasyonu ile giriş yapma durumları yönetilmiştir.
 ![10](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/4b097f32-14b4-484f-8e42-011c1cba9909)
-Formik ve Yup validasyonu ile giriş yapma durumları yönetilmiştir.
-
 
 2-Sitenin görsel ile kaplı kısmında ise <SwiperSlider/> kullanılmıştır, bunun amacı ise kaydırmalı bir yapı ile diğer görselleri görebilme estetiği sağlanılmaya çalışılmıştır.
 ![3](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/98581d07-573e-4f34-a9e3-755878cdd31f)
