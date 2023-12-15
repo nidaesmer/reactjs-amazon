@@ -3,7 +3,7 @@
 
 ### İlk olarak sitemizin üst kısmından başlayalım.
 
-###1-
+### 1-
 Sitenin en üstünde Navbar filesi kodlandı ve düz tailwind tasarımı yapıldı fakat farklılık olarak "login"e Ternary operatörü olan isLoggedIn ile etki-tepki sağlanmaya çalışıldı.
 ![1](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/7265c94c-1c41-41ba-9d0f-9e13bd39a1c8)
  Kodları ise :
@@ -12,12 +12,12 @@ buradanın amacı kullanıcının giriş yapmış olup olmadığına bağlı ola
 Eğer kullanıcı giriş yapmışsa (isLoggedIn true ise), "logout" butonunu render eder. Bu buton, belirli bir stile sahiptir ve tıklama olayını işleyen bir onClick olay işleyici içerir. 
 
 
-###2-
+### 2-
 Şimdi sitenin login kısmına bir bakalım. Formik ve Yup validasyonu ile giriş yapma durumları yönetilmiştir.
 ![10](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/4b097f32-14b4-484f-8e42-011c1cba9909)
 
 
-###3-
+### 3-
 Sitenin görsel ile kaplı kısmında ise <SwiperSlider/> kullanılmıştır, bunun amacı ise kaydırmalı bir yapı ile diğer görselleri görebilme estetiği sağlanılmaya çalışılmıştır.
 ![3](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/98581d07-573e-4f34-a9e3-755878cdd31f)
 
@@ -25,7 +25,7 @@ kodlarda swiperSliderin özellikleri işlenmiştir.
 ![4](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/efcf53ca-ba16-4919-8a37-08f3bd214267)
 
 
-###4-
+### 4-
 Sitemizin bu kısmında cartlar görünüyor. Farklı görsel ve reklamlarla e-ticaret mantığı uygulanmaya çalışıldı.
 ![5](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/393a89c5-b39e-4647-bba7-876c3c8c76cb)
 
