@@ -91,4 +91,7 @@ Global State olarak kullanılan Redux sayesinde ürünlerin miktarlarının artm
 
 
 
+
+
+
 >>>>>>> 431e131f096c203e59053658c1fb1bad1938a7a1
