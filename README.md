@@ -58,4 +58,15 @@ Burada Shopping Carttaki ürün, ürün bilgileri ve toplam fiyat gösterilmişt
 Toplam fiyatın yazdırılması:
 ![14](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/cbce011f-cf98-44b1-836d-4ae5b8d11fd4)
 
+Global State olarak kullanılan Redux sayesinde ürünlerin miktarlarının artması ve azalması işlemleri yapılabilmektedir. Aynı zamanda fiyatlar Türk Lirası, Dolar ve Euro olarak seçilebilmektedir.
+![16](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/19e7478f-1ee6-4eb2-8846-b5bc23798e30)
+
+İncrement ve decrement tetiklenmesinin kodları ise:
+![17](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/6d5d26f6-e745-49fa-93ba-9749a7bf9d24)
+
+## Bu görüntüler ve daha fazlası için sitemin canlıya alınmış halini ziyaret edebilirsiniz, kodlarım ise proje reposunda bulunmaktadır. Teşekkür ederim!
+[esmer](https://esmerzon.netlify.app/)https://esmerzon.netlify.app/
+
+
+
 
