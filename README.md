@@ -28,9 +28,11 @@ kodlarda swiperSliderin özellikleri işlenmiştir.
 ### 4-
 Sitemizin bu kısmında cartlar görünüyor. Farklı görsel ve reklamlarla e-ticaret mantığı uygulanmaya çalışıldı.
 ![4](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/efcf53ca-ba16-4919-8a37-08f3bd214267)
-![5](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/393a89c5-b39e-4647-bba7-876c3c8c76cb)
 
-4-Bu kısımda sitenin tıklanabilir kategorileri gösterilmiştir. Herhangi bir ürüne tıklayıp detaya gitme sayfası kodlanmıştır.
+
+### 5-
+Bu kısımda sitenin tıklanabilir kategorileri gösterilmiştir. Herhangi bir ürüne tıklayıp detaya gitme sayfası kodlanmıştır.
+![5](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/393a89c5-b39e-4647-bba7-876c3c8c76cb)
 
 Best Sellers kısmı için detayların json dosyasından gelme işlemi şu kodlarla sağlanmıştır:
 ![6](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/66f79245-18a1-4db0-859c-57add689e3be)
@@ -50,23 +52,31 @@ ifadesi, her slayt içinde bir resim öğesi oluşturur. Resmin yolu (src) i de�
 e) ```Link to={`/product/${i}`}>```
 Bu kısım, React Router tarafından sağlanan Link bileşenini kullanarak bir bağlantı oluşturur. Bu bağlantı, "/product" yoluna giden bir URL'yi temsil eder ve bu URL'nin sonuna i değeri eklenir. Yani, her slayt bir ürünü temsil eder ve bu ürünün detaylarına yönlendiren bir bağlantı oluşturulur.
 
-
+### 6-
+Sitenin bu bölümünde tıklanan ürünün detay sayfasına gittiği görülüyor. Jsondan alınan veriler ile title, img, badge, rating değerleri görülmekte. Bu değerler için ise ayrı ayrı filelerimiz mevcut.
 ![8](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/c899936a-3d52-427b-83e9-e617da734165)
-Sitenin bu bölümünde tıklanan ürünün detay sayfasına gittiği görülüyor. Jsondan alınan veriler ile title, img, badge, rating değerleri görülmekte. Bu değerler için ise ayrı ayrı filelerimiz mevcut. ve kodlarımızda bu filelerden props geçtiğimiz görünmektedir:
+
+ve kodlarımızda bu filelerden props geçtiğimiz görünmektedir:
 ![9](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/1022ed67-f524-4c06-9d2a-2b459aa0da20)
 
+
+### 7- 
 Şimdiki bölüm ise Add to Cart olayını gösterecek. Burada bilgileri ve ürünün miktarını görmekteyiz.
 ![12](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/73bc3857-f3a8-4350-aa77-964751672e23)
 
 Kodlarda ise jsondan geçilen propslar, miktarın eski ve yeni fiyatları gösterilmiş ve bunlar dispatch hook ile yazılmıştır.
 ![11](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/ced969a3-48b8-4435-8a43-f25646b23b3b)
 
+
+### 8-
 Burada Shopping Carttaki ürün, ürün bilgileri ve toplam fiyat gösterilmiştir.
 ![13](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/a010e29b-2ff4-4f0a-bd85-a746ac90cb33)
 
 Toplam fiyatın yazdırılması:
 ![14](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/cbce011f-cf98-44b1-836d-4ae5b8d11fd4)
 
+
+### 9- 
 Global State olarak kullanılan Redux sayesinde ürünlerin miktarlarının artması ve azalması işlemleri yapılabilmektedir. Aynı zamanda fiyatlar Türk Lirası, Dolar ve Euro olarak seçilebilmektedir.
 ![16](https://github.com/nidaesmer/bitirme-sisterslab/assets/77460814/19e7478f-1ee6-4eb2-8846-b5bc23798e30)
 
